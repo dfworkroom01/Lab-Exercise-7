@@ -1,3 +1,6 @@
+const PromptSync = require("prompt-sync");
+
+const prompt = require("prompt-sync")();
 //To create a prompt and provide the four basic math choices
 var count = prompt("Choose an arithmetic method: \n1. Addition \n2. Subtraction\n3. Multiplication\n4. Division");
 //To determine the first number which represents x in each math operation
@@ -11,22 +14,35 @@ var z = +x + +y;
 // The 4 basic math cases using switch to enable the input math operation choice by the user from the prompt
 switch (count) {
   case '1':
-    alert("Answer: " + z);
+    console.log("Answer: " + z);
     break;
 //case 1 is for addition
   case '2':
-    alert("Answer: " + (x - y));
+    console.log("Answer: " + (x - y));
     break;
 //case 2 is for substraction
   case '3':
-    alert("Answer: " + x * y);
+    console.log("Answer: " + x * y);
     break;
 //case 3 is for multiplication
   case '4':
-    alert("Answer: " + x / y);
+    console.log("Answer: " + x / y);
     break;
 }
 //case 4 is for division
 
-const exportedObject =  {count, x, y, z};
-module.exports = exportedObject;
+
+//the test
+console.log(count)
+
+//Step to test:
+//Run node module.js. Choose the math operation by typing in the number of the option. Click Enter. 
+//Enter the first number (any number)
+//Enter the second number (any number)
+
+//NOTE:
+//the prompt is combined with switch to call different match basic operations.
+//Therefore, the test is to ensure that when a user choose an operation, 
+//the prompt will refer to the correct option under the switch count cases (you can see your choice below the "Answer") 
+//and deliver the correct answer.
+
