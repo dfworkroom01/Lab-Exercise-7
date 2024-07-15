@@ -29,4 +29,4 @@ switch (count) {
 //case 4 is for division
 
 const exportedObject =  {count, x, y, z};
-module.exports - exportedObject;
+module.exports = exportedObject;
